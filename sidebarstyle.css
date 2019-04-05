@@ -1,0 +1,245 @@
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    /*padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    float: left;
+    max-width: 500px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav h3 {
+    padding: 4px 4px 4px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+
+
+}
+
+.sidenav input {
+    width: 60%;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 0px;
+    z-index: 1;
+    top: 0px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* Table containing the elements on the side bar*/
+.sidenav th, tr {
+    padding-top: 5px;
+}
+
+.sidenav th {
+    width: 15%;
+}
+
+.help-tip{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+    background-color: #8CABAA;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 26px;
+    cursor: default;
+}
+
+.help-tip:before{
+    content:'?';
+    font-weight: bold;
+    color:#fff;
+}
+
+.help-tip:hover p{
+    display:block;
+    transform-origin: 100% 0%;
+
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+
+}
+
+.help-tip p{    /* The tooltip */
+    display: none;
+    text-align: left;
+    background-color: #1E2021;
+    padding: 20px;
+    width: 300px;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    right: -4px;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.help-tip p:before{ /* The pointer of the tooltip */
+    position: absolute;
+    content: '';
+    width:0;
+    height: 0;
+    border:6px solid transparent;
+    border-bottom-color:#1E2021;
+    right:10px;
+    top:-12px;
+}
+/*.help-tip p:after{  Prevents the tooltip from being hidden
+    width:100%;
+    height:40px;
+    content:'';
+    position: absolute;
+    top:-40px;
+    left:0;
+}*/
+
+/* CSS animation */
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity:0;
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity:100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}
+
+
+
+.sidenav input[type=checkbox]
+{
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    padding: 10px;
+}
+
+/* Might want to wrap a span around your checkbox text */
+.sidenav .checkboxtext
+{
+    /* Checkbox text */
+    font-size: 110%;
+    display: inline;
+}
+
+.sidenav .firstOfType
+{
+    padding-top: 25px;
+}
+
+ul#menu {
+    font-family: Verdana, sans-serif;
+    top: 0px;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: fixed;
+    background-color: #111;
+    z-index: 0;
+    float: top;
+
+
+
+}
+
+ul#menu li {
+    background-color: #FF831C;
+    border-bottom: 5px solid #54BAE2;
+    display: block;
+    width: 150px;
+    height: 30px;
+    float: left; /* elementi su singola riga */
+    z-index: 999;
+    top: 0; /* Stay at the top */
+    left: 0;
+}
+
+ul#menu li a {
+    margin-top: 0;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    line-height: 30px;
+    text-decoration: none;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    z-index: 999;
+    background-color: #111;
+    border-bottom: 5px solid #111;
+    top: 0; /* Stay at the top */
+    left: 0;
+}
+
+ul#menu li.active, ul#menu li:hover {
+    background-color: #333333;
+    border-bottom: 5px solid #333333;
+    z-index: 999;
+    top: 0; /* Stay at the top */
+    left: 0;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #111; !important
+    color: #111;            !important
+}
+

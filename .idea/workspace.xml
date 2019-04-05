@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="feaea280-c660-4394-82cb-1ebc5388e3cc" name="Default" comment="SideBar changes">
+      <change beforePath="$PROJECT_DIR$/.idea/LateralBarTrial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LateralBarTrial.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/polyModelsAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/polyModelsAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/topBarAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/topBarAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TopBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/TopBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/node_modules/npm/node_modules/har-validator/node_modules/ajv/dist/nodent.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/node_modules/npm/node_modules/har-validator/node_modules/ajv/dist/nodent.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scripts/SaveLoadAjax.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="164" column="4" selection-start-line="164" selection-start-column="4" selection-end-line="164" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SaveManagement.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Scripts/SaveLoadFunctions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="347" column="340" selection-start-line="347" selection-start-column="340" selection-end-line="347" selection-end-column="340" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/saveLoadPage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>file</find>
+      <find>not</find>
+      <find>render</find>
+      <find>response</find>
+      <find>cl</find>
+      <find>click</find>
+      <find>name</find>
+      <find>&lt;</find>
+      <find>files</find>
+      <find>.name</find>
+      <find>Users</find>
+      <find>breadcrumbsUrls</find>
+      <find>generate</find>
+      <find>clic</find>
+      <find>Urls</find>
+      <find>conso</find>
+      <find>trigger</find>
+      <find>file =</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Users</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\PietroMeloni\WebstormProjects\ProveDiCamera</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/listener-component.js" />
+        <option value="$PROJECT_DIR$/wheel-color-picker.js" />
+        <option value="$PROJECT_DIR$/wheelcolorpicker.css" />
+        <option value="$PROJECT_DIR$/jscolor.js" />
+        <option value="$PROJECT_DIR$/jquery-3.3.1.js" />
+        <option value="$PROJECT_DIR$/spinner.js" />
+        <option value="$PROJECT_DIR$/CursorListener.js" />
+        <option value="$PROJECT_DIR$/inputListeners.js" />
+        <option value="$PROJECT_DIR$/textureHandler.js" />
+        <option value="$PROJECT_DIR$/sidebar.js" />
+        <option value="$PROJECT_DIR$/bootstrapJavascript.js" />
+        <option value="$PROJECT_DIR$/polymodelsAPI.js" />
+        <option value="$PROJECT_DIR$/sidebarstyle.css" />
+        <option value="$PROJECT_DIR$/lateralBarAPI.js" />
+        <option value="$PROJECT_DIR$/cursorToMousePosition.js" />
+        <option value="$PROJECT_DIR$/cursorTo3DPosition.js" />
+        <option value="$PROJECT_DIR$/AframeAutoscale.js" />
+        <option value="$PROJECT_DIR$/HTMLImport.js" />
+        <option value="$PROJECT_DIR$/polyModelsAPI.js" />
+        <option value="$PROJECT_DIR$/PositionInput.html" />
+        <option value="$PROJECT_DIR$/RotationInput.html" />
+        <option value="$PROJECT_DIR$/scaleInput.html" />
+        <option value="$PROJECT_DIR$/ColorPickerInput.html" />
+        <option value="$PROJECT_DIR$/VisibilityCheckBox.html" />
+        <option value="$PROJECT_DIR$/InputHTMLInjection.js" />
+        <option value="$PROJECT_DIR$/my-project.git/FluxDispatcher.js" />
+        <option value="$PROJECT_DIR$/my-project.git/FluxStore.js" />
+        <option value="$PROJECT_DIR$/FluxDispatcher.mjs" />
+        <option value="$PROJECT_DIR$/FluxDispatcher.js" />
+        <option value="$PROJECT_DIR$/FluxStore.js" />
+        <option value="$PROJECT_DIR$/topBarAPI.js" />
+        <option value="$PROJECT_DIR$/Scripts/requireScriptJS.js" />
+        <option value="$PROJECT_DIR$/Scripts/ComToReqConv.js" />
+        <option value="$PROJECT_DIR$/Scripts/main.js" />
+        <option value="$PROJECT_DIR$/Scripts/FluxDispatcher.js" />
+        <option value="$PROJECT_DIR$/Scripts/FluxStore.js" />
+        <option value="$PROJECT_DIR$/Scripts/topBarAPI.js" />
+        <option value="$PROJECT_DIR$/TopBar.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/SaveLoadManagement.php" />
+        <option value="$PROJECT_DIR$/Scripts/HTMLtoString.js" />
+        <option value="$PROJECT_DIR$/LoadManagement.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Scripts/gblock.js" />
+        <option value="$PROJECT_DIR$/Scripts/polyModelsAPI.js" />
+        <option value="$PROJECT_DIR$/SaveLoadPage.html" />
+        <option value="$PROJECT_DIR$/scan.php" />
+        <option value="$PROJECT_DIR$/SaveManagement.php" />
+        <option value="$PROJECT_DIR$/saveLoadPage.php" />
+        <option value="$PROJECT_DIR$/Scripts/SaveLoadAjax.js" />
+        <option value="$PROJECT_DIR$/Scripts/SaveLoadFunctions.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-5" />
+    <option name="width" value="1520" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>PHP</id>
+          </State>
+          <State>
+            <id>TypeScript</id>
+          </State>
+          <State>
+            <id>UnusedPHP</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Code StylePHP</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TopBar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TopBar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TopBar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TopBar" type="462c0819:PsiDirectoryNode" />
+              <item name="Scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="9.5.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="C:\Users\PietroMeloni\WebstormProjects\TopBar\node_modules\eslint" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="node.js.selected.package.standard" value="C:\Users\PietroMeloni\WebstormProjects\TopBar\node_modules\eslint" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PietroMeloni\WebstormProjects\TopBar\Scripts" />
+      <recent name="C:\Users\PietroMeloni\WebstormProjects\TopBar" />
+      <recent name="C:\Users\PietroMeloni\WebstormProjects\TopBar\HTMLInputs" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.php" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost/TopBar/index.php">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="feaea280-c660-4394-82cb-1ebc5388e3cc" name="Default" comment="" />
+      <created>1521542598276</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1521542598276</updated>
+      <workItem from="1521542599563" duration="3354000" />
+      <workItem from="1521630434970" duration="11280000" />
+      <workItem from="1522771665575" duration="4104000" />
+      <workItem from="1522852352542" duration="18319000" />
+      <workItem from="1523629184481" duration="5148000" />
+      <workItem from="1523975634245" duration="2809000" />
+      <workItem from="1524011331246" duration="17382000" />
+      <workItem from="1524579550091" duration="5137000" />
+      <workItem from="1524786999066" duration="28781000" />
+      <workItem from="1525440134951" duration="2487000" />
+      <workItem from="1525701505831" duration="33437000" />
+      <workItem from="1526394998697" duration="7267000" />
+      <workItem from="1526574827343" duration="597000" />
+      <workItem from="1527035171190" duration="259000" />
+      <workItem from="1527081185350" duration="14843000" />
+      <workItem from="1527300402522" duration="1989000" />
+      <workItem from="1527527263154" duration="31421000" />
+      <workItem from="1527880034919" duration="3763000" />
+      <workItem from="1527905432223" duration="1576000" />
+      <workItem from="1528073533932" duration="4665000" />
+      <workItem from="1528296235344" duration="2228000" />
+      <workItem from="1528483521623" duration="13594000" />
+      <workItem from="1529046683029" duration="17820000" />
+      <workItem from="1529418060336" duration="10855000" />
+      <workItem from="1529938681815" duration="3586000" />
+      <workItem from="1530885908230" duration="595000" />
+      <workItem from="1531273323871" duration="598000" />
+      <workItem from="1531515684500" duration="1995000" />
+      <workItem from="1532030828553" duration="13299000" />
+      <workItem from="1532565242180" duration="8771000" />
+      <workItem from="1532627554010" duration="10854000" />
+      <workItem from="1535735553566" duration="2255000" />
+      <workItem from="1535897408897" duration="596000" />
+      <workItem from="1536139145489" duration="6223000" />
+      <workItem from="1536856869135" duration="3822000" />
+      <workItem from="1537120946356" duration="20479000" />
+      <workItem from="1537803392494" duration="598000" />
+      <workItem from="1538319277797" duration="1948000" />
+      <workItem from="1538585098313" duration="1318000" />
+      <workItem from="1538751943385" duration="11213000" />
+      <workItem from="1539268953171" duration="2473000" />
+      <workItem from="1539613323801" duration="63000" />
+      <workItem from="1539613444929" duration="13335000" />
+      <workItem from="1541004061068" duration="1189000" />
+      <workItem from="1545315731150" duration="720000" />
+      <workItem from="1545316628535" duration="1311000" />
+      <workItem from="1547477568144" duration="3092000" />
+      <workItem from="1547641911521" duration="5045000" />
+      <workItem from="1548254592826" duration="2406000" />
+      <workItem from="1548430697379" duration="1487000" />
+      <workItem from="1548957131309" duration="5701000" />
+      <workItem from="1549476880636" duration="515000" />
+      <workItem from="1549477810160" duration="12259000" />
+      <workItem from="1550268863736" duration="3738000" />
+      <workItem from="1550939432362" duration="1197000" />
+      <workItem from="1551423469416" duration="3199000" />
+      <workItem from="1551560471379" duration="668000" />
+      <workItem from="1551627829877" duration="11320000" />
+      <workItem from="1552672843763" duration="2433000" />
+      <workItem from="1553109297761" duration="3392000" />
+      <workItem from="1553194553286" duration="2575000" />
+      <workItem from="1553209181151" duration="22042000" />
+      <workItem from="1554366078169" duration="5070000" />
+      <workItem from="1554376143367" duration="877000" />
+      <workItem from="1554377054426" duration="38000" />
+      <workItem from="1554397116565" duration="5442000" />
+    </task>
+    <task id="LOCAL-00001" summary="Integration of help and CSS Major Changes">
+      <created>1525197219208</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1525197219208</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Integration of help and CSS Major Changes">
+      <created>1525357137605</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1525357137605</updated>
+    </task>
+    <task id="LOCAL-00003" summary="CSS Major Changes, added some lateral Bar API functions">
+      <created>1525825395324</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1525825395324</updated>
+    </task>
+    <task id="LOCAL-00004" summary="SideBar changes">
+      <created>1525827293740</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1525827293740</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="442852000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.15570469" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" sideWeight="0.5011494" side_tool="true" weight="0.1360677" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32965517" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4986577" weight="0.39943343" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49798658" weight="0.11756374" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013423" side_tool="true" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32965517" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49934897" visible="true" weight="0.15172414" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="13" sideWeight="0.49798658" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="npm" order="0" sideWeight="0.5011494" side_tool="true" visible="true" weight="0.1360677" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49885058" visible="true" weight="0.1360677" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32965517" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32965517" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49934897" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32965517" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50065106" side_tool="true" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32965517" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49934897" visible="true" weight="0.15172414" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Integration of help and CSS Major Changes" />
+    <MESSAGE value="CSS Major Changes, added some lateral Bar API functions" />
+    <MESSAGE value="SideBar changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="SideBar changes" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/aframe-material.min.js" />
+    <entry file="file://$PROJECT_DIR$/listener-component.js" />
+    <entry file="file://$PROJECT_DIR$/Scripts/aframe-rounded.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="143" column="16" selection-start-line="143" selection-start-column="16" selection-end-line="143" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery-3.3.1.js" />
+    <entry file="file://$PROJECT_DIR$/wheelcolorpicker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="159" column="1" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/wheel-color-picker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="2624" column="12" selection-start-line="2624" selection-start-column="12" selection-end-line="2624" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sidebarstyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4165">
+          <caret line="245" selection-start-line="245" selection-end-line="245" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/intersect-and-manipulate-master/html/Scene1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTMLInputs/ColorPickerInput.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTMLInputs/PositionInput.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTMLInputs/RotationInput.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTMLInputs/ScaleInput.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTMLInputs/VisibilityCheckBox.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/AframeAutoscale.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="3" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/nodejs/package.json" />
+    <entry file="file://$PROJECT_DIR$/Scripts/bootstrapJavascript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/textureHandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/spinner.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/requireJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/requireScriptJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17536" selection-start-line="4" selection-start-column="17536" selection-end-line="4" selection-end-column="17536" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TopBar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/jscolor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2992">
+          <caret line="176" column="77" selection-start-line="176" selection-start-column="77" selection-end-line="176" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/gblock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63835">
+          <caret line="3755" column="48" selection-start-line="3755" selection-start-column="48" selection-end-line="3755" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/InputHTMLInjection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/aframe-material.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50779">
+          <caret line="2987" column="19" selection-start-line="2987" selection-start-column="19" selection-end-line="2987" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/inputListeners.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="118" column="65" selection-start-line="118" selection-start-column="57" selection-end-line="118" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/HTMLtoString.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/HTMLImporter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="63" column="2" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/FluxStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="8" selection-end-line="19" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/FluxDispatcher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/cursorTo3DPosition.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/CursorListener.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="81" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GUI/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/lateralBarAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/polyModelsAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="115" column="91" selection-start-line="115" selection-start-column="91" selection-end-line="115" selection-end-column="91" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/topBarAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveLoadPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoadManagement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="66" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saveLoadPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/SaveLoadAjax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="164" column="4" selection-start-line="164" selection-start-column="4" selection-end-line="164" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SaveManagement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/SaveLoadFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="347" column="340" selection-start-line="347" selection-start-column="340" selection-end-line="347" selection-end-column="340" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
