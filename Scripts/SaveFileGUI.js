@@ -345,7 +345,8 @@ $(function(){
 					icon = '<span class="icon file f-'+fileType+'">.'+fileType+'</span>';
 
 
-					var file = $('<li class="files" ><a title="'+ f.path +'" class="files" >'+icon+'<span class="name">'+ name +'</span> <span class="details">'+fileSize+'</span></a></li>').on('click',function (){window.opener.saveOnFileChosenByChild(f.path); var thiswindow= window.self; thiswindow.opener = window.self; thiswindow.close()});
+					var file = $('<li class="files" ><a title="'+ f.path +'" class="files" >'+icon+'<span class="name">'+ name +'</span> <span class="details">'+fileSize+'</span></a></li>')
+						.on('click', function (){window.opener.saveOnFileChosenByChild(f.path); var thiswindow= window.self; thiswindow.opener = window.self; thiswindow.close()});
 
 					file.appendTo(fileList);
 				});
