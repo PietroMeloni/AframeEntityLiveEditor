@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <title>Choose where to save...</title>
+    <title>Choose from witch save you want to load...</title>
 
 
     <!-- Include our stylesheet -->
@@ -37,9 +37,7 @@
 
 <!-- Include our script files -->
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="Scripts/SaveFileGUI.js"></script>
-
-
+<script src="Scripts/LoadFileGUI.js"></script>
 <nav id="context-menu" class="context-menu">
     <ul class="context-menu__items">
         <li class="context-menu__item">
@@ -54,5 +52,6 @@
     </ul>
 </nav>
 <script src="Scripts/contextMenu.js"></script>
+
 </body>
 </html>

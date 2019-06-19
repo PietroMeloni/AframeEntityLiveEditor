@@ -333,9 +333,8 @@ $(function(){
 
 			if(scannedFiles.length) {
 
-				var createNewFile = $('<li class="files" ><a title="Create new file" class="files" ><span class="icon file f- .save"> .save </span><span class="name">New save file</span> </a></li>').on('click', function (){window.opener.saveOnFileChosenByChild("NewFile"); var thiswindow= window.self; thiswindow.opener = window.self; thiswindow.close()});
-				createNewFile.appendTo(fileList);
-
+				// var createNewFile = $('<li class="files" ><a title="Create new file" class="files" ><span class="icon file f- .txt"> txt </span><span class="name">Create new file</span> </a><br><input type="text" id="savename"></li>')/*.on('click', function (){loadFromPath(f.path); })*/;
+				// createNewFile.appendTo(fileList);
 
 				scannedFiles.forEach(function(f) {
 
@@ -348,9 +347,9 @@ $(function(){
 
 					icon = '<span class="icon file f-'+fileType+'">.'+fileType+'</span>';
 
-					console.log(f.path);
+
 					var file = $('<li class="files" ><a title="'+ f.path +'" class="files" >'+icon+'<span class="name">'+ name +'</span> <span class="details">'+fileSize+'</span></a></li>')
-						.on('click', function (){window.opener.saveOnFileChosenByChild(f.path); var thiswindow= window.self; thiswindow.opener = window.self; thiswindow.close()});
+						.on('click', function (){loadFromPath(f.path); });
 
 					file.appendTo(fileList);
 				});
@@ -412,6 +411,48 @@ $(function(){
 			if (bytes == 0) return '0 Bytes';
 			var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
 			return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+		}
+
+		function loadFromPath(path)
+		{
+			console.log("ciao");
+			var data = new FormData();
+			data.append("path", path);
+			var oReq = new XMLHttpRequest(); //New request object
+			oReq.onload = function() {
+				console.log(JSON.parse(this.responseText));
+				window.opener.loadFromFileChosenByChild(JSON.parse(this.responseText).result);
+
+				var thiswindow = window.self;
+				thiswindow.opener = window.self;
+				thiswindow.close();
+			};
+			oReq.open("post", "LoadManagement.php", true);
+			oReq.send(data);
+			// jQuery.ajax({
+			// 	type: "POST",
+			// 	url: 'LoadManagement.php',
+			// 	dataType: 'json',
+			// 	data: {path: path},
+			//
+			// 	success: function (obj, textstatus) {
+			// 		console.log("ciao1");
+			// 		if( !('error' in obj) ) {
+			// 			console.log("ciao2");
+			// 			window.opener.loadFromFileChosenByChild(obj.result);
+			// 			var thiswindow = window.self;
+			// 			thiswindow.opener = window.self;
+			// 			thiswindow.close()
+			// 		}
+			//
+			// 		else {
+			// 			//console.log(obj.error);
+			// 			console.log("errore");
+			// 		}
+			// 		console.log("ciao");
+			// 	}
+			// });
+
 		}
 
 		// function saveOnFile(path) {

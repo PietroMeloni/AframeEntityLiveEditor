@@ -85,21 +85,29 @@ function addToScene (item, position) {
 
     // add new entity to scene
     var newEntity = document.createElement('a-entity')
-
+    var boundingBoxCenter;
     newEntity.addEventListener('model-loaded', function (event) {
 
         // center model to picking position
-        var bb = new THREE.Box3().setFromObject(event.detail.model) // bounding box
-        var size = new THREE.Vector3(Math.abs(bb.max.x - bb.min.x), Math.abs(bb.max.y - bb.min.y), Math.abs(bb.max.z - bb.min.z))
+        var bb = new THREE.Box3().setFromObject(event.detail.model) ;// bounding box
+        var size = new THREE.Vector3(Math.abs(bb.max.x - bb.min.x), Math.abs(bb.max.y - bb.min.y), Math.abs(bb.max.z - bb.min.z));
         position.set(
             position.x - bb.min.x - size.x / 2,
             -bb.min.y,
             position.z - bb.min.z - size.z / 2
         )
 
+        const offsetX = (bb.max.x + bb.min.x)/2
+        const offsetY = (bb.max.y + bb.min.y)/2
+        const offsetZ = (bb.max.z + bb.min.z)/2
+        console.log("ciaaaooooo");
+        // apply the offset
+        boundingBoxCenter={x:-offsetX,y:-offsetY, z:-offsetZ};
+
+        //console.log("OOOH")
         newEntity.setAttribute('position', position.x + ' ' + position.y + ' ' + position.z)
         newEntity.setAttribute('scale', 0.9 + ' ' + 0.9 + ' ' + 0.9)
-
+        newEntity.setAttribute("bbcenter", boundingBoxCenter);
 
         //callback()
 
@@ -114,7 +122,11 @@ function addToScene (item, position) {
     }, {once: true})
 
     newEntity.setAttribute('gblock', item.url+"?key=AIzaSyD45itPMW71VVsyiVlesrozXylwZ2G3TJE");
+    //this class is needed to open the side bar onclick on a object.
     newEntity.setAttribute("my-cursor-listener", "");
+    //the raycaster need a class to know witch object are intersectable. "selectable" is this class.
+    newEntity.setAttribute("selectable", "");
+    //newEntity.setAttribute("holdSelector: [holdable-light]", "");
     //newEntity.setAttribute("autoscale", "");
 
     var selected2BeRemoved = document.getElementsByClassName("selected");
@@ -131,15 +143,8 @@ function addToScene (item, position) {
 
     objThatWillBeAddToScene = newEntity;
 
-    var SE = document.getElementsByClassName("addedByUser");
 
-    console.log("adding test on user input savings");
-    for(var i=0; i < SE.length; i++)
-    {
-        console.log(SE[0]);
-    }
-    console.log("fine")
-    console.log(newEntity)
+
 
     return newEntity;
 

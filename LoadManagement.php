@@ -6,13 +6,23 @@
  * Time: 22:32
  */
 
-    $filename = "Users/newfile.txt";
-    $myfile = fopen($filename, "rb") or die("Unable to open file!");
-    $elementsLoaded = fread($myfile, filesize($filename));
-    $_POST['loadedElements']=$elementsLoaded;
+    if(isset($_POST['path']))
+    {
+        $filename = $_POST['path'];
+        $myfile = fopen($filename, "rb") or die("Unable to open file!");
+        $elementsLoaded = fread($myfile, filesize($filename));
+        $loadedFromFile["result"] = $elementsLoaded;
+        $_POST['loadedElements'] = $elementsLoaded;
+        //echo json_last_error($elementsLoaded);
+
+        fclose($myfile);
 
 
-    fclose($myfile);
-    echo json_encode($elementsLoaded);
+    }
+    else
+    {
+        $loadedFromFile["error"] = 'error path not set';
+    }
 
+    echo json_encode($loadedFromFile);
 ?>

@@ -68,8 +68,7 @@ function updatePositionsSpinners(selectedElement)
 
 function updatePositionsSpinnersPositionOnly(position)
 {
-    console.log("position ",position);
-    console.log("position.x ",position.x);
+
     var inputPosX = document.getElementById("spinner_pos_x");
     var inputPosY = document.getElementById("spinner_pos_y");
     var inputPosZ = document.getElementById("spinner_pos_z");

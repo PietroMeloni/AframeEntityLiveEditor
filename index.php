@@ -23,10 +23,28 @@
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 
 
-    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
-    <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
 
-    //without data main 'cause I want to do inline requires
+    <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
+    <script src="//unpkg.com/aframe-leap-hands/dist/aframe-leap-hands.umd.js"></script>
+    <script src="https://rawgit.com/andreasplesch/aframe-meshline-component/master/dist/aframe-meshline-component.min.js"></script>
+    <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
+    <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component/dist/aframe-text-geometry-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+    <script src="Scripts/intersect-and-manipulate.js"></script>
+    <script src="Scripts/holdable.js"></script>
+    <script src="Scripts/mouseControl.js"></script>
+    <script src="Scripts/gestioneAnimazioni.js"></script>
+    <script src="Scripts/intersect-light.js"></script>
+    <script src="Scripts/holdable-light.js"></script>
+    <script src="Scripts/mouseControl-light.js"></script>
+
+
+    <script src="Scripts/bodies-and-editors.js"></script>
+
+    <!--    <script src="Scripts/IAMScript.js"></script>-->
+<!--    //without data main 'cause I want to do inline requires-->
     <script src="Scripts/requireScriptJS.js"></script>
     <script>
         // Using RequireJS instead of using typical script src tag
@@ -57,6 +75,7 @@
             require(['Scripts/HTMLImporter'])
             require(['Scripts/SaveLoadAjax'])
             require(['Scripts/HTMLtoString'])
+            //require(['Scripts/IAMScript'])
 
             // require(['Scripts/FluxDispatcher'])
             // require(['Scripts/FluxStore'])
@@ -90,8 +109,7 @@
 </head>
 <body>
 
-
-
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="mySidenav" class="sidenav">
     <h3>
         <table class="lateralTable">
@@ -106,27 +124,48 @@
 
 </div>
 
-<!-- Use any element to open the sidenav -->
+<!--Use any element to open the sidenav-->
 <span onclick="openNav()">open</span>
-
-<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main" >
 
-    <a-scene ondrop="drop(event)" ondragover="allowDrop(event)">
+    <a-scene cursor="rayOrigin: mouse"  ondrop="drop(event)" ondragover="allowDrop(event)" >
 
         <!-- <obj-model my-cursor-listener class="affectedByEvents" src="#linnet-obj" mtl="#linnet-mtl" position="0 0 -5" scale="0.01 0.01 0.01"></obj-model>-->
         <a-sky color="#ABABAB"></a-sky>
 
+        <a-asset>
+            <img id="colorWheel" src="assets/ColorsWheel.jpg">
+            <img id="lightnessWheel" src="assets/LightnessWheel.jpg">
+        </a-asset>
 
 
 
-        <a-entity camera look-controls wasd-controls mouse-cursor>
-            <a-entity cursor="rayOrigin: mouse"></a-entity>
+        <a-circle class="selectable" trigger-light-bodies rotation="0 0 0" position="0 -0.5 -4" radius="0.5" color="#633" shader="flat">
+            <a-text value='AAAAA' align='center'></a-text>
+        </a-circle>
+
+        <a-light id="spotLight" type="spot" light='distance: 5' position="-10 1.5 0" rotation='0 90 0'></a-light>
+        <a-light id="pointLight" type="point" light='distance: 10' position="0 0 10"></a-light>
+        <a-light id="directionalLight" type="directional" position="0 3 -10" rotation="0 0 0" target="#directionaltarget">
+            <a-entity id="directionaltarget" position="0 -1 0"></a-entity>
+        </a-light>
+        <a-light  id="ambientLight" type="ambient" intensity="0.1" position="10 3 0" color="hsl(0, 100%, 100%)"></a-light>
+
+
+        <!-- Set hands and control as children of camera !-->
+        <a-entity id= "camera" camera="near: 0.01" camera look-controls mouse-cursor wasd-controls position="0 1.5 7">
+
+            <a-entity leap-hand="hand: left; holdDistance: 0.5; holdSelector: [holdable-light]" position="0 -0.25 -0.5"></a-entity>
+            <a-entity leap-hand="hand: right; holdDistance: 0.5; holdSelector: [holdable-light]" position="0 -0.25 -0.5"></a-entity>
+            <a-entity intersect-and-manipulate></a-entity>
+            <a-entity animate></a-entity>
+            <a-entity intersect-light></a-entity>
 
         </a-entity>
 
+
     </a-scene>
-    <ul>
+     <ul>
 
         <table>
             <tr>
@@ -143,6 +182,13 @@
                         </div>
                     </li>
                 </td>
+                <td><select name="editObj" id="selectTransform" size="3">
+                        <option value="translate" selected="selected">Position</option>
+                        <option value="rotate">Rotation</option>
+                        <option value="scale">Scale</option>
+                        <option value="remove">Remove Editor</option>
+
+                    </select></td>
             </tr>
         </table>
 
@@ -150,24 +196,15 @@
 
     </ul>
 
-    </div>
+</div>
 
-    <script>
-        // insertPositionInputInTable("lateralTable");
-        // insertRotationInputInTable("lateralTable");
-        // insertScaleInputInTable("lateralTable");
-        // insertColorPickerInTable("lateralTable");
-        // insertVisibilityCheckboxInTable("lateralTable");
-        /*the only js is to continuously checking the value of the dropdown. for posterity*/
-        //var i = setInterval(function(){$("#trace").val($("input[name=line-style]:checked").val());},100);
-        //fixTextures();
-        //addRandomHouse();
-        // searchPolyModels("house");
+<script>
+    //console.log(AFRAME.scenes[0].querySelector('[raycaster]'));
+</script>
 
 
 
 
-    </script>
 
 
 </body>

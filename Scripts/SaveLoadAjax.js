@@ -17,7 +17,7 @@ $('#saveButton').click(function() {
         if (this.readyState == 4) {
             switch (this.status) {
                 case 200:
-                    newWindow.location = "saveLoadPage.php";
+                    newWindow.location = "savePage.php";
                     break;
                 default:
                     alert('aw snap');
@@ -32,45 +32,67 @@ $('#saveButton').click(function() {
 
 $('#loadButton').click(function() {
      removeElementsAddedByUser();
-    $.ajax({
-        url: 'LoadManagement.php',
-        type: 'POST',
-        dataType: "json",
 
-        success: function(elementsLoaded){
+    var newWindow = window.open("", "_blank");
+    // var xhr = new XMLHttpRequest();
+    // var data = new FormData();
+    // xhr.open( 'post', "LoadManagement.php", true );
+    // xhr.responseType = "document";
+    // xhr.onreadystatechange = function() {
+    //     if (this.readyState == 4) {
+    //         switch (this.status) {
+    //             case 200:
+    //                 newWindow.location = "loadPage.php";
+    //                 break;
+    //             default:
+    //                 alert('aw snap');
+    //                 break;
+    //         }
+    //     }
+    // };
+    // xhr.send(data);
+    newWindow.location = "loadPage.php";
 
-            var position = $(elementsLoaded).attr("position");
 
-            var rotation = $(elementsLoaded).attr("rotation");
-            var scale = $(elementsLoaded).attr("scale");
-            var itmUrl = $(elementsLoaded).first().attr("gblock");
-            $(elementsLoaded).each(function() {
-                $.each(this.attributes, function() {
-                    // this.attributes is not a plain object, but an array
-                    // of attribute nodes, which contain both the name and value
-                    if(this.specified) {
-
-                        if(this.name =="position")
-                            position = this.value;
-
-                        if(this.name == "rotation")
-                            rotation = this.value;
-                        if(this.name=="scale")
-                            scale = this.value;
-                        if(this.name=="gblock")
-                            itmUrl = this.value;
-                    }
-                });
-                
-                addNewEntityByPosScaleRotModel(position, scale, rotation, itmUrl);
-
-            });
+    // $.ajax({
+    //     url: 'LoadManagement.php',
+    //     type: 'POST',
+    //     dataType: "json",
+    //
+    //     success: function(elementsLoaded){
+    //
+    //         var position = $(elementsLoaded).attr("position");
+    //
+    //         var rotation = $(elementsLoaded).attr("rotation");
+    //         var scale = $(elementsLoaded).attr("scale");
+    //         var itmUrl = $(elementsLoaded).first().attr("gblock");
+    //         $(elementsLoaded).each(function() {
+    //             $.each(this.attributes, function() {
+    //                 // this.attributes is not a plain object, but an array
+    //                 // of attribute nodes, which contain both the name and value
+    //                 if(this.specified) {
+    //
+    //                     if(this.name =="position")
+    //                         position = this.value;
+    //
+    //                     if(this.name == "rotation")
+    //                         rotation = this.value;
+    //                     if(this.name=="scale")
+    //                         scale = this.value;
+    //                     if(this.name=="gblock")
+    //                         itmUrl = this.value;
+    //                 }
+    //             });
+    //
+    //             addNewEntityByPosScaleRotModel(position, scale, rotation, itmUrl);
+    //
+    //         });
             //addNewEntityByPosScaleRotModel(position, scale, rotation, itmUrl);
 
 
 
-        }
-    });
+     //   }
+    //});
 
 });
 
@@ -151,8 +173,9 @@ function removeElementsAddedByUser()
  */
  window.saveOnFileChosenByChild = function(path) {
 
+    console.log(path);
     var elesAddedByUser = document.getElementsByClassName("addedByUser");
-     console.log(elesAddedByUser);
+
     var stringEles ="";
     for(var i = 0; i < elesAddedByUser.length; i++)
     {
@@ -164,8 +187,39 @@ function removeElementsAddedByUser()
     //set the path in witch the php file will save
     data.append("path", path);
     //var newWindow = window.open("", "_blank");
-    var xhr = new XMLHttpRequest();
+    //RICORDATI DI TOGLIERE QUESTE 3 RIGHE CHE SERVIVANO SOLO PER TESTARE IL SALVATAGGIO SU FILE NEL SERVER
+     var xhr = new XMLHttpRequest();
 
     xhr.open( 'post', "SaveManagement.php", true );
     xhr.send(data);
+}
+
+window.loadFromFileChosenByChild = function(elementsLoaded) {
+
+    var position = $(elementsLoaded).attr("position");
+
+    var rotation = $(elementsLoaded).attr("rotation");
+    var scale = $(elementsLoaded).attr("scale");
+    var itmUrl = $(elementsLoaded).first().attr("gblock");
+    $(elementsLoaded).each(function() {
+        $.each(this.attributes, function() {
+            // this.attributes is not a plain object, but an array
+            // of attribute nodes, which contain both the name and value
+            if(this.specified) {
+
+                if(this.name =="position")
+                    position = this.value;
+
+                if(this.name == "rotation")
+                    rotation = this.value;
+                if(this.name=="scale")
+                    scale = this.value;
+                if(this.name=="gblock")
+                    itmUrl = this.value;
+            }
+        });
+
+        addNewEntityByPosScaleRotModel(position, scale, rotation, itmUrl);
+
+    });
 }
