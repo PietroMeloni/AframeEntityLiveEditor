@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feaea280-c660-4394-82cb-1ebc5388e3cc" name="Default" comment="SideBar changes">
-      <change beforePath="$PROJECT_DIR$/SaveLoadBrowseStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/SaveLoadBrowseStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/CursorListener.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/CursorListener.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/mousecontrol-light.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/mousecontrol-light.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/mousecontrol.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/mousecontrol.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/polyModelsAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/polyModelsAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TopBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/TopBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebarstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/sidebarstyle.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,6 +15,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Scripts/polyModelsAPI.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="128" column="52" selection-start-line="128" selection-start-column="52" selection-end-line="128" selection-end-column="52" />
+              <folding>
+                <element signature="n#style#0;n#label#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scripts/CursorListener.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -31,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1479">
@@ -203,7 +209,6 @@
         <option value="$PROJECT_DIR$/Scripts/intersect-and-manipulate.js" />
         <option value="$PROJECT_DIR$/Scripts/holdable.js" />
         <option value="$PROJECT_DIR$/Scripts/lateralBarAPI.js" />
-        <option value="$PROJECT_DIR$/Scripts/polyModelsAPI.js" />
         <option value="$PROJECT_DIR$/SaveLoadBrowseStyle.css" />
         <option value="$PROJECT_DIR$/rightbar.css" />
         <option value="$PROJECT_DIR$/Scripts/mousecontrol.js" />
@@ -212,6 +217,7 @@
         <option value="$PROJECT_DIR$/Scripts/CursorListener.js" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/TopBar.css" />
+        <option value="$PROJECT_DIR$/Scripts/polyModelsAPI.js" />
       </list>
     </option>
   </component>
@@ -418,7 +424,7 @@
       <workItem from="1558433813412" duration="8137000" />
       <workItem from="1558711065377" duration="49357000" />
       <workItem from="1560326902002" duration="33638000" />
-      <workItem from="1560870294682" duration="73246000" />
+      <workItem from="1560870294682" duration="73405000" />
     </task>
     <task id="LOCAL-00001" summary="Integration of help and CSS Major Changes">
       <created>1525197219208</created>
@@ -452,7 +458,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="642571000" />
+    <option name="totallyTimeSpent" value="642730000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -795,17 +801,6 @@
     <entry file="file://$PROJECT_DIR$/contextmenustyle.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/polyModelsAPI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="99" column="46" selection-start-line="99" selection-start-column="46" selection-end-line="99" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/mousecontrol-light.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -873,6 +868,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1479">
           <caret line="258" selection-start-line="258" selection-end-line="258" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/polyModelsAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="128" column="52" selection-start-line="128" selection-start-column="52" selection-end-line="128" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

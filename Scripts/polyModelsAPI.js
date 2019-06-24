@@ -126,7 +126,7 @@ function addToScene (item, position) {
 
     }, {once: true})
 
-    newEntity.setAttribute('gblock', item.url+"?key=AIzaSyD45itPMW71VVsyiVlesrozXylwZ2G3TJE");
+    newEntity.setAttribute('gblock', item.url+"?key=");
     //this class is needed to open the side bar onclick on a object.
     newEntity.setAttribute("my-cursor-listener", "");
     //the raycaster need a class to know witch object are intersectable. "selectable" is this class.
