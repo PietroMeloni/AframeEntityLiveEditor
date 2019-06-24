@@ -1,0 +1,235 @@
+/* The side navigation menu */
+.rightBar {
+    height: 35%; /* 100% Full-height */
+    width: 15%;/* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    /*padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    float: right;
+    max-width: 500px;
+}
+
+.rightBar:hover {
+    height:400px;
+    /*nice and smooth expand - speed this up at your preference or remove animation altogether*/
+    -moz-transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
+}
+
+#image-dropdown:hover {
+    /*when expanded, the dropdown will get native means of scrolling*/
+
+}
+
+/* The navigation menu links */
+.rightBar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.rightBar h3 {
+    padding: 4px 4px 4px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+
+}
+
+/* When you mouse over the navigation links, change their color */
+.rightBar a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.rightBar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+
+
+}
+
+.rightBar input {
+    width: 60%;
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .rightBar {padding-top: 15px;}
+    .rightBar a {font-size: 18px;}
+}
+
+/* Table containing the elements on the side bar*/
+.rightBar th, tr {
+    padding-top: 5px;
+}
+
+.rightBar th {
+    width: 15%;
+}
+
+.rightBar input[type=checkbox]
+{
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    padding: 10px;
+}
+
+/* Might want to wrap a span around your checkbox text */
+.rightBar .checkboxtext
+{
+    /* Checkbox text */
+    font-size: 110%;
+    display: inline;
+}
+
+.rightBar .firstOfType
+{
+    padding-top: 25px;
+}
+
+/* Table containing the elements on the side bar*/
+.rightBar th, tr {
+    padding-top: 5px;
+}
+
+.rightBar th {
+    width: 15%;
+}
+
+/*o.v.*/
+
+#image-dropdown {
+    /*style the "box" in its minimzed state*/
+    border:1px gainsboro;
+    width:150px;
+    height:80px;
+    overflow:hidden;
+
+    /*animate collapsing the dropdown from open to closed state (v. fast)*/
+    -moz-transition: height 0.1s;
+    -webkit-transition: height 0.1s;
+    -ms-transition: height 0.1s;
+    -o-transition: height 0.1s;
+    transition: height 0.1s;
+    margin-right: 13px;
+    margin-left: 13px;
+
+}
+#image-dropdown:hover {
+    /*when expanded, the dropdown will get native means of scrolling*/
+    height:200px;
+    overflow-y:scroll;
+    /*nice and smooth expand - speed this up at your preference or remove animation altogether*/
+    -moz-transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
+}
+#image-dropdown input {
+    /*hide the nasty default radio buttons. like, completely!*/
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+}
+
+
+#image-dropdown label {
+    /*style the labels to look like dropdown options, kinda*/
+    display:block;
+    margin:2px;
+    height:80px;
+    opacity: 0.5;
+    /*setting correct backgrounds - add additional rules with selectors based on "for" attribute, something like label[for=line2]{background-image:...}*/
+    /*background:url("http://www.google.com/images/srpr/logo3w.png");*/
+}
+#image-dropdown:hover label{
+    /*this is how labels render in the "expanded" state. we want to see only the selected radio button in the collapsed menu, and all of them when expanded*/
+    display:block;
+}
+#image-dropdown label:hover {
+    opacity:0.7;
+}
+#image-dropdown input:checked + label {
+    /*tricky! labels immediately following a checked radio button (with our markup they are semantically related) should be fully opaque regardless of hover, and they should always be visible (i.e. even in the collapsed menu*/
+    display:block;
+}
+
+/*pfft, nothing as cool here, just the value trace*/
+#trace {margin:0 0 20px;}
+
+
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+li.dropdown {
+    display: inline-block;
+    margin: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 0;
+    margin: 16px;
+}
+
+.dropdown-content a {
+    color: whitesmoke;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    margin: 16px;
+}
+
+.dropdown-content a:hover {background-color: #333}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+input[type=text]#topbar-search {
+    float: left;
+    margin: 30px;
+    font-size: 17px;
+    width: 150px;
+}

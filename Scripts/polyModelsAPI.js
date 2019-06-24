@@ -86,6 +86,7 @@ function addToScene (item, position) {
     // add new entity to scene
     var newEntity = document.createElement('a-entity')
     var boundingBoxCenter;
+    var boxSize;
     newEntity.addEventListener('model-loaded', function (event) {
 
         // center model to picking position
@@ -96,18 +97,22 @@ function addToScene (item, position) {
             -bb.min.y,
             position.z - bb.min.z - size.z / 2
         )
-
+        //calculating boundingBox middle point
         const offsetX = (bb.max.x + bb.min.x)/2
         const offsetY = (bb.max.y + bb.min.y)/2
         const offsetZ = (bb.max.z + bb.min.z)/2
         console.log("ciaaaooooo");
         // apply the offset
         boundingBoxCenter={x:-offsetX,y:-offsetY, z:-offsetZ};
-
+        boxSize = bb.getSize();
+        console.log("starting write of box size")
+        console.log(boxSize);
+        console.log("i've wrote box size")
         //console.log("OOOH")
         newEntity.setAttribute('position', position.x + ' ' + position.y + ' ' + position.z)
         newEntity.setAttribute('scale', 0.9 + ' ' + 0.9 + ' ' + 0.9)
-        newEntity.setAttribute("bbcenter", boundingBoxCenter);
+        newEntity.setAttribute("box-size", boxSize.x +" "+boxSize.y+" "+boxSize.z);
+        newEntity.setAttribute("box-center", offsetX +" "+offsetY+" "+offsetZ);
 
         //callback()
 

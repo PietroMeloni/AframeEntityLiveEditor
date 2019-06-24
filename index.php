@@ -6,21 +6,24 @@
     <meta name="description" content="Aframe-Material">
     <meta http-equiv="Content-Type"  content="application/javascript" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Optional Bootstrap theme -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+
     <link href="sidebarstyle.css" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" href="wheelcolorpicker.css">
     <link type="text/css" rel="stylesheet" href="TopBar.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="rightbar.css">
 
 
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Optional Bootstrap theme -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+
 
 
 
@@ -109,6 +112,8 @@
 </head>
 <body>
 
+
+
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="mySidenav" class="sidenav">
     <h3>
@@ -123,6 +128,34 @@
     </h3>
 
 </div>
+
+<div id="myrightBar" class="rightBar">
+    <table>
+        <tr>
+            <td><input id="topbar-search" type="text" placeholder="Search.." onchange="onTopBarSearchChange()" ></td>
+
+
+        </tr>
+        <tr>
+            <td>
+                <li class="dropdown">
+                    <div id="image-dropdown" >
+
+                    </div>
+                </li>
+            </td>
+
+            <td>
+                <br>
+            </td>
+            <td>
+            </td>
+
+
+        </tr>
+    </table>
+</div>
+
 
 <!--Use any element to open the sidenav-->
 <span onclick="openNav()">open</span>
@@ -140,8 +173,8 @@
 
 
 
-        <a-circle class="selectable" trigger-light-bodies rotation="0 0 0" position="0 -0.5 -4" radius="0.5" color="#633" shader="flat">
-            <a-text value='AAAAA' align='center'></a-text>
+        <a-circle class="selectable" trigger-light-bodies rotation="0 0 0" position="0 -0.5 -1" radius="0.5" color="#633" shader="flat">
+            <a-text value='Lights\n OnOff' align='center'></a-text>
         </a-circle>
 
         <a-light id="spotLight" type="spot" light='distance: 5' position="-10 1.5 0" rotation='0 90 0'></a-light>
@@ -165,37 +198,100 @@
 
 
     </a-scene>
-     <ul>
+    <header class="header">
+     <ul id="ulTopBar">
 
         <table>
             <tr>
-                <td><input id="topbar-search" type="text" placeholder="Search.." onchange="onTopBarSearchChange()" ></td>
+<!--                <td><input id="topbar-search" type="text" placeholder="Search.." onchange="onTopBarSearchChange()" ></td>-->
                 <td><button id="saveButton">Save</button></td>
+                <th>
+                    <div class="help-tipT">
+                     <p>Pressing the button you can save your work in a save file. Just press "create" new save file or overwrite an old one.</p>
+                    </div>
+                </th>
                 <td><button id="loadButton" >Load</button></td>
-
-            </tr>
-            <tr>
+                <th>
+                    <div class="help-tipT">
+                        <p>Pressing the button you can load your work from a save file. Just double click the one you want to load!</p>
+                    </div>
+                </th>
                 <td>
-                    <li class="dropdown">
-                        <div id="image-dropdown" >
+                    <<div class="switch-field">
+                        <input type="radio" id="radio-trsl" name="switch-transform" value="translate" checked/>
+                        <label for="radio-trsl">Move</label>
+                        <input type="radio" id="radio-rot" name="switch-transform" value="rotate" />
+                        <label for="radio-rot">Rotate</label>
+                        <input type="radio" id="radio-scale" name="switch-transform" value="scale" />
+                        <label for="radio-scale">Resize</label>
+                        <input type="radio" id="radio-rmvtrnsfrm" name="switch-transform" value="remove" />
+                        <label for="radio-rmvtrnsfrm">Remove Editor</label>
+                    </div>
+
+                </td>
+                <th>
+                    <div class="help-tipT">
+                        <p>Choose in witch way you want to edit an object in the scene.<br>
+                           Select by clicking one of the buttons then click the object you want to edit.<br>
+                           Remember that the green one is the selected editor. <br>
+                           If you want to remove the editor just click remove editor plus click the object<br>
+                           If you want to move your position instead of the object one just use wasd or arrows
+                        </p>
+
+
+
+                    </div>
+                </th>
+                <td>
+                    <div class="popover__wrapper">
+                        <a href="#">
+                            <h2 class="popover__title">How to start:</h2>
+                        </a>
+                        <div class="popover__content">
+                            <p class="popover__message">
+                                You just need drag and drop to create a scene!
+                                So, try to search the right object in the right bar.
+                                If you don't find it there then try to
+                                to type a descriptive word on the search bar
+                                to see if you can catch the right one.
+                                Once you find the right one just drag the image in the middle
+                                of the screen e drop it!
+
+
+                            </p>
 
                         </div>
-                    </li>
+                    </div>
                 </td>
-                <td><select name="editObj" id="selectTransform" size="3">
-                        <option value="translate" selected="selected">Position</option>
-                        <option value="rotate">Rotation</option>
-                        <option value="scale">Scale</option>
-                        <option value="remove">Remove Editor</option>
+                <td>
+                    <div class="popover__wrapper">
+                        <a href="#">
+                            <h2 class="popover__title">How to use lights:</h2>
+                        </a>
+                        <div class="popover__content">
+                            <p class="popover__message">
+                                If you want to see the light editor just press the button "lighsOnOff"
+                                in the middle of the screen.
+                                You have point light in front, spotlight on your left, directional on your
+                                right. To see the ambient light you should move the camera using "s" or the arrow
+                                on the keyboard that point toward you so you move you position and you can see it.
+                                When you've done you can hide the light pressing the button "lightsOnOff".
 
-                    </select></td>
+                            </p>
+
+                        </div>
+                    </div>
+                </td>
+
             </tr>
+
         </table>
 
 
 
     </ul>
 
+    </header>
 </div>
 
 <script>

@@ -11,7 +11,7 @@ AFRAME.registerComponent('my-cursor-listener', {
 
             console.log("elemento cliccato");
             var selected2BeRemoved = document.getElementsByClassName("selected");
-            var transformSelected = document.getElementById("selectTransform");
+            var transformSelected = document.querySelector('input[name="switch-transform"]:checked').value;
             console.log(transformSelected);
 
             if(selected2BeRemoved[0] != undefined)
@@ -21,14 +21,15 @@ AFRAME.registerComponent('my-cursor-listener', {
             myelement.classList.add("selected");
 
             IAMtargetObject.aframeEl = myelement;
-            if(transformSelected[transformSelected.selectedIndex].value === "remove")
+            if(transformSelected === "remove")
             {
-                document.querySelector('#camera').removeChild(transform);
+                //console.log(document.querySelector("[camera]"));
+                myelement.removeChild(transform);
             }
             else {
 
 
-            createTransformForMouseControlsIAM(transformSelected[transformSelected.selectedIndex].value, myelement);
+            createTransformForMouseControlsIAM(transformSelected, myelement);
 
             }
             updateEntireLateralBar(myelement);
@@ -64,7 +65,13 @@ AFRAME.registerComponent('my-cursor-listener', {
 function createTransformForMouseControlsIAM(transformType, object2btransformed) {
 
     let values = null;
+    let center;
     let transform = document.querySelector('#transform');
+    //this is the standard size that we will use for upgrading the transform axis size.
+    const standardBoxSize = 3.5;
+    let boundingBoxSizes;
+    let muxConst;
+
     if(transform === null || transform === undefined) {
         transform = document.createElement('a-entity');
         transform.setAttribute('id', 'transform');
@@ -78,60 +85,69 @@ function createTransformForMouseControlsIAM(transformType, object2btransformed) 
         object2btransformed.appendChild(transform);
     }
     //console.log(object2btransformed.getAttribute("bbcenter"))
-    transform.setAttribute('position', "2 -1 -5");
+    center=(object2btransformed.getAttribute("box-center")).split(" ");
+    boundingBoxSizes=(object2btransformed.getAttribute("box-size")).split(" ");
+
+    muxConst = getMoltiplicationConstantForTransformScale(boundingBoxSizes, standardBoxSize);
+
+    console.log(muxConst);
+
+    transform.setAttribute('position', center[0]+" "+center[1]+"  "+center[2]);
 
     transform.setAttribute('rotation', document.querySelector('[camera]').getAttribute('rotation'));
+
+
     if (transformType === 'translate') {
         IAMcurrentControl = 0;
         values = {
             x: {
                 tag: 'a-entity',
                 id: 'x',
-                position: '0.3 0 0.3',
+                position: 0.3*muxConst+" "+0*muxConst+" "+0.3*muxConst,
                 material: 'color: #ff0000',
-                scale: '0.15 0.15 0.15',
+                scale: 0.15*muxConst+" "+0.15*muxConst+" "+0.15*muxConst,
                 rotation: '0 -45 -90',
                 geometry: 'primitive: cone; radiusBottom: 0.25'
             },
             xLine: {
                 tag: 'a-entity',
                 id: 'xLine',
-                lineAttribute: 'start: 0.3, 0, 0.3; end: 0 0 0; color: #ff0000'
+                lineAttribute: "start: "+0.3*muxConst+"+, 0, "+0.3*muxConst+"; end: 0 0 0; color: #ff0000"
             },
             y: {
                 tag: 'a-entity',
                 id: 'y',
-                position: '0 0.3 0',
+                position: 0*muxConst+" "+0.3*muxConst+" "+0*muxConst,
                 material: 'color: #00ff00',
-                scale: '0.15 0.15 0.15',
+                scale: 0.15*muxConst+" "+0.15*muxConst+" "+0.15*muxConst,
                 rotation: '0 0 0',
                 geometry: 'primitive: cone; radiusBottom: 0.25'
             },
             yLine: {
                 tag: 'a-entity',
                 id: 'yLine',
-                lineAttribute: 'start: 0, 0.3, 0; end: 0 0 0; color: #00ff00'
+                lineAttribute: "start: 0, "+0.3*muxConst+", 0; end: 0 0 0; color: #00ff00"
             },
             z: {
                 tag: 'a-entity',
                 id: 'z',
-                position: '-0.3 0 0.3',
+                position: -0.3*muxConst+" "+0*muxConst+" "+0.3*muxConst,
                 material: 'color: #0000ff',
-                scale: '0.15 0.15 0.15',
+                scale: 0.15*muxConst+" "+0.15*muxConst+" "+0.15*muxConst,
                 rotation: '0 45 90',
                 geometry: 'primitive: cone; radiusBottom: 0.25'
             },
             zLine: {
                 tag: 'a-entity',
                 id: 'zLine',
-                lineAttribute: 'start: -0.3, 0, 0.3; end: 0 0 0; color: #0000ff'
+                lineAttribute: "start: "+(-0.3*muxConst)+" "+0*muxConst+" "+0.3*muxConst+"; end: 0 0 0; color: #0000ff"
             },
             all: {
                 tag: 'a-entity',
                 id: 'all',
                 position: '0 0 0',
                 material: 'color: #ffffff',
-                scale: '0.05 0.05 0.05',
+                scale: 0.05*muxConst+" "+0.05*muxConst+" "+0.05*muxConst,
                 geometry: 'primitive: sphere'
             }
         }
@@ -141,51 +157,51 @@ function createTransformForMouseControlsIAM(transformType, object2btransformed) 
             x: {
                 tag: 'a-entity',
                 id: 'x',
-                position: '0.2 0 0.2',
+                position: 0.2*muxConst+" 0 "+0.2*muxConst,
                 material: 'color: #ff0000',
-                scale: '0.06 0.06 0.06',
+                scale: 0.06*muxConst+" "+0.06*muxConst+" "+0.06*muxConst,
                 rotation: '0 45 0',
                 geometry: 'primitive: box'
             },
             xLine: {
                 tag: 'a-entity',
                 id: 'xLine',
-                lineAttribute: 'start: 0.2, 0, 0.2; end: 0 0 0; color: #ff0000'
+                lineAttribute: "start: "+0.2*muxConst+", 0, "+0.2*muxConst+"; end: 0 0 0; color: #ff0000"
             },
             y: {
                 tag: 'a-entity',
                 id: 'y',
-                position: '0 0.2 0',
+                position: "0 "+0.2*muxConst+" 0",
                 material: 'color: #00ff00',
-                scale: '0.06 0.06 0.06',
+                scale: 0.06*muxConst+" "+0.06*muxConst+" "+0.06*muxConst,
                 rotation: '0 45 0',
                 geometry: 'primitive: box'
             },
             yLine: {
                 tag: 'a-entity',
                 id: 'yLine',
-                lineAttribute: 'start: 0, 0.2, 0; end: 0 0 0; color: #00ff00'
+                lineAttribute: "start: 0, "+0.2*muxConst+", 0; end: 0 0 0; color: #00ff00"
             },
             z: {
                 tag: 'a-entity',
                 id: 'z',
-                position: '-0.2 0 0.2',
+                position: -0.2*muxConst+" 0 "+0.2*muxConst,
                 material: 'color: #0000ff',
-                scale: '0.06 0.06 0.06',
+                scale: 0.06*muxConst+" "+0.06*muxConst+" "+0.06*muxConst,
                 rotation: '0 45 0',
                 geometry: 'primitive: box'
             },
             zLine: {
                 tag: 'a-entity',
                 id: 'zLine',
-                lineAttribute: 'start: -0.2, 0, 0.2; end: 0 0 0; color: #0000ff'
+                lineAttribute: "start: "+(-0.2*muxConst)+", 0, "+0.2*muxConst+"; end: 0 0 0; color: #0000ff"
             },
             all: {
                 tag: 'a-entity',
                 id: 'all',
                 position: '0 0 0',
                 material: 'color: #ffffff',
-                scale: '0.05 0.05 0.05',
+                scale: 0.05*muxConst+" "+0.05*muxConst+" "+0.05*muxConst,
                 geometry: 'primitive: box'
             }
         }
@@ -197,7 +213,7 @@ function createTransformForMouseControlsIAM(transformType, object2btransformed) 
                 id: 'x',
                 position: '0 0 0',
                 material: 'color: #ff0000',
-                scale: '0.075 0.075 0.075',
+                scale: 0.075*muxConst+" "+0.075*muxConst+" "+0.075*muxConst,
                 rotation: '0 90 0',
                 geometry: 'primitive: torus; radius: 5; radiusTubular: 0.1; segmentsRadial: 100; segmentsTubular: 100'
             },
@@ -211,7 +227,7 @@ function createTransformForMouseControlsIAM(transformType, object2btransformed) 
                 id: 'y',
                 position: '0 0 0',
                 material: 'color: #00ff00',
-                scale: '0.075 0.075 0.075',
+                scale: 0.075*muxConst+" "+0.075*muxConst+" "+0.075*muxConst,
                 rotation: '90 0 0',
                 geometry: 'primitive: torus; radius: 5; radiusTubular: 0.1; segmentsRadial: 100; segmentsTubular: 100'
             },
@@ -225,7 +241,7 @@ function createTransformForMouseControlsIAM(transformType, object2btransformed) 
                 id: 'z',
                 position: '0 0 0',
                 material: 'color: #0000ff',
-                scale: '0.075 0.075 0.075',
+                scale: 0.075*muxConst+" "+0.075*muxConst+" "+0.075*muxConst,
                 rotation: '0 0 0',
                 geometry: 'primitive: torus; radius: 5; radiusTubular: 0.1; segmentsRadial: 100; segmentsTubular: 100'
             },
@@ -239,10 +255,25 @@ function createTransformForMouseControlsIAM(transformType, object2btransformed) 
                 id: 'all',
                 position: '0 0 0',
                 material: 'color: #ffffff',
-                scale: '0.075 0.075 0.075',
+                scale: 0.075*muxConst+" "+0.075*muxConst+" "+0.075*muxConst,
                 geometry: 'primitive: torus; radius: 6; radiusTubular: 0.1; segmentsRadial: 100; segmentsTubular: 100'
             }
         }
     }
     createControl(transform, values);
+}
+
+/**
+ * Calculate constant that is big if the boundingBoxSize is big and small otherwise.
+ * It's a simple linear proportion between parameters.
+ * @param boundingBoxSizes sizes of the bounding box (x, y, z lengths)
+ * @param standardCompareSize if standardCompareSize and max bouningBoxSize are equal, this function return 1.
+ */
+function getMoltiplicationConstantForTransformScale(boundingBoxSizes, standardCompareSize)
+{
+    let muxScaleConstant = 1;
+    let maxBBSize = Math.max(boundingBoxSizes[0], boundingBoxSizes[1], boundingBoxSizes[2]);
+    muxScaleConstant = (24*maxBBSize+58)/85;
+
+    return muxScaleConstant;
 }

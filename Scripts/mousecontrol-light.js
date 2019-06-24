@@ -42,7 +42,7 @@ AFRAME.registerComponent('trigger-light-bodies', {
 
 AFRAME.registerComponent('trigger-light-editor', {
     init: function () {
-        console.log("hai clickato la luce");
+
         this.el.addEventListener('click', function (evt) {
             let targetLightBody = evt.target;
             while (targetLightBody.getAttribute("light") === null) {
