@@ -20,7 +20,7 @@ In the right search bar, is been searched "home" by default. You have 2 choice:
 2. Drag directly one of the models aviable in the scene.
 Depending on your internect connection, after a while, the model will appear in the scene.
 
-###Edit an Object in the scene
+### Edit an Object in the scene
 
 1. Using the left bar;
 2. Usign [A-Frame Intersect and Manipulate](https://github.com/Frac7/intersect-and-manipulate).
