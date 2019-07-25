@@ -333,7 +333,7 @@ $(function(){
 
 			if(scannedFiles.length) {
 
-				var createNewFile = $('<li class="files" ><a title="Create new file" class="files" ><span class="icon file f- .save"> .save </span><span class="name">New save file</span> </a></li>').on('click', function (){window.opener.saveOnFileChosenByChild("NewFile"); var thiswindow= window.self; thiswindow.opener = window.self; thiswindow.close()});
+				var createNewFile = $('<li class="files" ><a title="Create new file" class="files" ><span class="icon file f- .save"> .save </span><span class="name">Save a New File</span> </a></li>').on('click', function (){window.opener.saveOnFileChosenByChild("NewFile"); var thiswindow= window.self; thiswindow.opener = window.self; thiswindow.close()});
 				createNewFile.appendTo(fileList);
 
 

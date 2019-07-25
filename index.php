@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Top Bar Prova</title>
+    <title>D3P2</title>
     <meta name="description" content="Aframe-Material">
     <meta http-equiv="Content-Type"  content="application/javascript" />
 
@@ -217,7 +217,7 @@
                     </div>
                 </th>
                 <td>
-                    <<div class="switch-field">
+                    <div class="switch-field">
                         <input type="radio" id="radio-trsl" name="switch-transform" value="translate" checked/>
                         <label for="radio-trsl">Move</label>
                         <input type="radio" id="radio-rot" name="switch-transform" value="rotate" />
@@ -230,9 +230,9 @@
 
                 </td>
                 <th>
-                    <div class="help-tipT">
+                    <div class="help-tip">
                         <p>Choose in witch way you want to edit an object in the scene.<br>
-                           Select by clicking one of the buttons then click the object you want to edit.<br>
+                           Select it by clicking one of the buttons then click the object you want to edit.<br>
                            Remember that the green one is the selected editor. <br>
                            If you want to remove the editor just click remove editor plus click the object<br>
                            If you want to move your position instead of the object one just use wasd or arrows
@@ -242,48 +242,11 @@
 
                     </div>
                 </th>
-                <td>
-                    <div class="popover__wrapper">
-                        <a href="#">
-                            <h2 class="popover__title">How to start:</h2>
-                        </a>
-                        <div class="popover__content">
-                            <p class="popover__message">
-                                You just need drag and drop to create a scene!
-                                So, try to search the right object in the right bar.
-                                If you don't find it there then try to
-                                to type a descriptive word on the search bar
-                                to see if you can catch the right one.
-                                Once you find the right one just drag the image in the middle
-                                of the screen e drop it!
 
-
-                            </p>
-
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <div class="popover__wrapper">
-                        <a href="#">
-                            <h2 class="popover__title">How to use lights:</h2>
-                        </a>
-                        <div class="popover__content">
-                            <p class="popover__message">
-                                If you want to see the light editor just press the button "lighsOnOff"
-                                in the middle of the screen.
-                                You have point light in front, spotlight on your left, directional on your
-                                right. To see the ambient light you should move the camera using "s" or the arrow
-                                on the keyboard that point toward you so you move you position and you can see it.
-                                When you've done you can hide the light pressing the button "lightsOnOff".
-
-                            </p>
-
-                        </div>
-                    </div>
-                </td>
+                <td><button id="helpButton" >Help</button></td>
 
             </tr>
+
 
         </table>
 

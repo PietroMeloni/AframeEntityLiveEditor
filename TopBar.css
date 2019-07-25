@@ -1,5 +1,8 @@
 #main{
-    width: 100%;
+    height: 100%; width: 100%;
+    z-index: 50;
+
+
 }
 
 
@@ -24,6 +27,22 @@
 #loadButton {
     float: left;
     margin: 20px;
+    font-size: 14px;
+    padding: 8px 16px;
+    /*margin-right: -1px;*/
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    background-color: #e4e4e4;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+
+}
+
+#helpButton {
+    float: left;
+    margin: 40px;
     font-size: 14px;
     padding: 8px 16px;
     /*margin-right: -1px;*/
@@ -109,6 +128,7 @@ ul {
     font-size: 14px;
     line-height: 26px;
     cursor: default;
+    z-index: 1;/*stay top*/
 }
 
 .help-tipT:before{
@@ -129,6 +149,7 @@ ul {
 .help-tipT p{    /* The tooltip */
     display: none;
     text-align: left;
+    z-index: 1;
     background-color: #1E2021;
     padding: 20px;
     width: 300px;
@@ -148,6 +169,7 @@ ul {
     content: '';
     width:0;
     height: 0;
+    z-index: 1;
     border:6px solid transparent;
     border-bottom-color:#1E2021;
     left:10px;
@@ -199,14 +221,14 @@ a {
 }
 
 .popover__title {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 18px;
+    line-height: 25px;
     text-decoration: none;
     color: rgb(228, 68, 68);
     text-align: center;
     padding: 20px;
     margin-left: 30px;
-    margin-bot: 30px;
+    margin-bot: 15px;
 
 }
 

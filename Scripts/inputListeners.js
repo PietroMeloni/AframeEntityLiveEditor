@@ -30,7 +30,14 @@ function onSpinnerPosXChange()
 
     var spinnerPosX = document.getElementById("spinner_pos_x");
 
-    elementsSelected[0].object3D.position.x = parseFloat(spinnerPosX.value);
+    if(spinnerPosX.value == "") {
+        elementsSelected[0].object3D.position.x = 0;
+    }
+    else
+    {
+        elementsSelected[0].object3D.position.x = parseFloat(spinnerPosX.value);
+    }
+
 
 }
 
@@ -46,7 +53,14 @@ function onSpinnerPosYChange()
 
     var spinnerPosY = document.getElementById("spinner_pos_y");
 
-    elementsSelected[0].object3D.position.y = parseFloat(spinnerPosY.value);
+    if(spinnerPosY.value == "")
+    {
+        elementsSelected[0].object3D.position.y = 0;
+    }
+    else
+    {
+        elementsSelected[0].object3D.position.y = parseFloat(spinnerPosY.value);
+    }
 
 }
 
@@ -62,9 +76,16 @@ function onSpinnerPosZChange()
 
     var spinnerPosZ = document.getElementById("spinner_pos_z");
 
-    console.log("spinnerZ =" + spinnerPosZ.value);
 
-    elementsSelected[0].object3D.position.z = parseFloat(spinnerPosZ.value);
+
+    if(spinnerPosZ.value == "")
+    {
+        elementsSelected[0].object3D.position.z = 0;
+    }
+    else
+    {
+        elementsSelected[0].object3D.position.z = parseFloat(spinnerPosZ.value);
+    }
 
 }
 
@@ -80,10 +101,15 @@ function onSpinnerRotXChange()
 
     var spinnerRotX = document.getElementById("spinner_rotation_x");
 
-    console.log("spinnerRotXValue = ",parseFloat(spinnerRotX.value));
-    console.log("spinnerRotXValue = ",elementsSelected[0].object3D.rotation.x);
+    if(spinnerRotX.value == "")
+    {
+        elementsSelected[0].object3D.rotation.x = 0;
+    }
+    else
+    {
+        elementsSelected[0].object3D.rotation.x = THREE.Math.degToRad(parseFloat(spinnerRotX.value));
+    }
 
-    elementsSelected[0].object3D.rotation.x = THREE.Math.degToRad(parseFloat(spinnerRotX.value));
 
     //console.log("Element rot x value = ",elementsSelected[0].object3D.rotation.x);
 }
@@ -100,7 +126,14 @@ function onSpinnerRotYChange()
 
     var spinnerRotY = document.getElementById("spinner_rotation_y");
 
-    elementsSelected[0].object3D.rotation.y = THREE.Math.degToRad(parseFloat(spinnerRotY.value));
+    if(spinnerRotY.value == "")
+    {
+        elementsSelected[0].object3D.rotation.y = 0;
+    }
+    else
+    {
+        elementsSelected[0].object3D.rotation.y = THREE.Math.degToRad(parseFloat(spinnerRotY.value));
+    }
 
 }
 
@@ -116,7 +149,14 @@ function onSpinnerRotZChange()
 
     var spinnerRotZ = document.getElementById("spinner_rotation_z");
 
-    elementsSelected[0].object3D.rotation.z = THREE.Math.degToRad(parseFloat(spinnerRotZ.value));
+    if(spinnerRotZ.value == "")
+    {
+        elementsSelected[0].object3D.rotation.z = 0;
+    }
+    else
+    {
+        elementsSelected[0].object3D.rotation.z = THREE.Math.degToRad(parseFloat(spinnerRotZ.value));
+    }
 
 }
 
@@ -133,7 +173,14 @@ function onDimXChange()
 
     var DimX = document.getElementById("dim_x");
 
-    elementsSelected[0].object3D.scale.x = DimX.value;
+    if(DimX.value == "")
+    {
+        elementsSelected[0].object3D.scale.x = 1;
+    }
+    else
+    {
+        elementsSelected[0].object3D.scale.x = parseFloat(DimX.value);
+    }
 
 }
 
@@ -149,7 +196,14 @@ function onDimYChange()
 
     var DimY = document.getElementById("dim_y");
 
-    elementsSelected[0].object3D.scale.y = DimY.value;
+    if(DimY.value == "")
+    {
+        elementsSelected[0].object3D.scale.y = 1;
+    }
+    else
+    {
+        elementsSelected[0].object3D.scale.y = parseFloat(DimY.value);
+    }
 
 }
 
@@ -165,7 +219,14 @@ function onDimZChange()
 
     var DimZ = document.getElementById("dim_z");
 
-    elementsSelected[0].object3D.scale.z = DimZ.value;
+    if(DimZ.value == "")
+    {
+        elementsSelected[0].object3D.scale.z = 1;
+    }
+    else
+    {
+        elementsSelected[0].object3D.scale.z = parseFloat(DimZ.value);
+    }
 
 }
 

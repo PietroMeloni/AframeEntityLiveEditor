@@ -125,8 +125,13 @@ function addToScene (item, position) {
         //io3d.utils.ui.message.error('Sorry: ' + event.detail.message + '<br/><a class="io3d-inspector-plugins___truncate-message" href="' + item.url + '" target="_blank">' + item.url + '</a>')
 
     }, {once: true})
-
+    //
+    // ADD HERE YOUR POLYGOOGLE API KEY
+    //
     newEntity.setAttribute('gblock', item.url+"?key=");
+    //
+    //
+    //
     //this class is needed to open the side bar onclick on a object.
     newEntity.setAttribute("my-cursor-listener", "");
     //the raycaster need a class to know witch object are intersectable. "selectable" is this class.

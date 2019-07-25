@@ -1,5 +1,34 @@
+$('#helpButton').click(function() {
+
+    var data = new FormData();
+
+    var newWindow = window.open("", "_blank");
+    var xhr = new XMLHttpRequest();
+
+    xhr.open( 'post', "SaveManagement.php", true );
+    xhr.responseType = "document";
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4) {
+            switch (this.status) {
+                case 200:
+                    newWindow.location = "help.php";
+                    break;
+                default:
+                    alert('aw snap');
+                    break;
+            }
+        }
+    };
+    xhr.send(data);
+
+
+});
+
+
+
 
 $('#saveButton').click(function() {
+
     var elesAddedByUser = document.getElementsByClassName("addedByUser");
     var stringEles ="";
     for(var i = 0; i < elesAddedByUser.length; i++)

@@ -1,1 +1,0 @@
-<a-entity gblock="https://vr.google.com/objects/f2pFD8wMXKi?key=AIzaSyD45itPMW71VVsyiVlesrozXylwZ2G3TJE" my-cursor-listener="" class="selected affectedByEvents addedByUser" position="0.15005238669069554 -1.3936548233032227 -2.591159639060497" rotation="0 0 0" scale="0.9 0.9 0.9" visible="true"></a-entity>

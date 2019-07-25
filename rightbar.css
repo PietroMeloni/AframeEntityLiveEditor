@@ -3,7 +3,7 @@
     height: 35%; /* 100% Full-height */
     width: 15%;/* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 6; /* Stay on top */
     top: 0; /* Stay at the top */
     right: 0;
     background-color: #111; /* Black*/
@@ -113,10 +113,12 @@
 /* Table containing the elements on the side bar*/
 .rightBar th, tr {
     padding-top: 5px;
+    z-index: 6;
 }
 
 .rightBar th {
     width: 15%;
+    z-index: 6;
 }
 
 /*o.v.*/
@@ -127,7 +129,7 @@
     width:150px;
     height:80px;
     overflow:hidden;
-
+    z-index: 4;
     /*animate collapsing the dropdown from open to closed state (v. fast)*/
     -moz-transition: height 0.1s;
     -webkit-transition: height 0.1s;
@@ -164,6 +166,7 @@
     margin:2px;
     height:80px;
     opacity: 0.5;
+    z-index: 4;
     /*setting correct backgrounds - add additional rules with selectors based on "for" attribute, something like label[for=line2]{background-image:...}*/
     /*background:url("http://www.google.com/images/srpr/logo3w.png");*/
 }
@@ -208,7 +211,7 @@ li.dropdown {
     background-color: #333;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 0;
+    z-index: 4;
     margin: 16px;
 }
 

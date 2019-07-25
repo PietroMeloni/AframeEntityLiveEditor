@@ -69,6 +69,7 @@ function createTransformForMouseControlsIAM(transformType, object2btransformed) 
     let transform = document.querySelector('#transform');
     //this is the standard size that we will use for upgrading the transform axis size.
     const standardBoxSize = 3.5;
+
     let boundingBoxSizes;
     let muxConst;
 

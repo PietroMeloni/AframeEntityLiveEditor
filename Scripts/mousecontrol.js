@@ -130,6 +130,11 @@ AFRAME.registerComponent('mousecontrol', {
     },
     tick: function () {
 
+        //used to reduce the movement of the object while using mouse
+        const positionSensResistence = 20;
+        const rotationSensResistance = 20;
+        const scaleSensResistance = 20;
+
         document.getElementsByTagName('body')[0].onkeyup = function (event) {
 
             if (IAMtargetObject.aframeEl !== null) {
@@ -145,47 +150,47 @@ AFRAME.registerComponent('mousecontrol', {
 			switch (mouseAxis) {
                 case 'x':
                     if (IAMcontrols[IAMcurrentControl] === 'translate') {
-                        targetElement.setAttribute('position', (targetElementOriginalValue.x + mouseDistance/2) + ' ' + targetElementOriginalValue.y + ' ' + targetElementOriginalValue.z);
+                        targetElement.setAttribute('position', (targetElementOriginalValue.x + mouseDistance/positionSensResistence) + ' ' + targetElementOriginalValue.y + ' ' + targetElementOriginalValue.z);
                         //spostamento assi assieme all'oggetto target
                         center=(targetElement.getAttribute("box-center")).split(" ");
                         document.querySelector('#transform').setAttribute('position', center[0]+" "+center[1]+"  "+center[2]);
                     } else if (IAMcontrols[IAMcurrentControl] === 'scale') {
-                        targetElement.setAttribute('scale', (targetElementOriginalValue.x + mouseDistance) + ' ' + targetElementOriginalValue.y + ' ' + targetElementOriginalValue.z);
+                        targetElement.setAttribute('scale', (targetElementOriginalValue.x + mouseDistance/scaleSensResistance) + ' ' + targetElementOriginalValue.y + ' ' + targetElementOriginalValue.z);
                     } else if (IAMcontrols[IAMcurrentControl] === 'rotate') {
-                        targetElement.setAttribute('rotation', (targetElementOriginalValue.x + (mouseDistance * 360)) + ' ' + targetElementOriginalValue.y + ' ' + targetElementOriginalValue.z);
+                        targetElement.setAttribute('rotation', (targetElementOriginalValue.x + (mouseDistance * 360)/rotationSensResistance) + ' ' + targetElementOriginalValue.y + ' ' + targetElementOriginalValue.z);
                     }
                     break;
                 case 'y':
                     if (IAMcontrols[IAMcurrentControl] === 'translate') {
-                        targetElement.setAttribute('position', targetElementOriginalValue.x + ' ' + (targetElementOriginalValue.y + mouseDistance/2) + ' ' + targetElementOriginalValue.z);
+                        targetElement.setAttribute('position', targetElementOriginalValue.x + ' ' + (targetElementOriginalValue.y + mouseDistance/positionSensResistence) + ' ' + targetElementOriginalValue.z);
                         center=(targetElement.getAttribute("box-center")).split(" ");
                         document.querySelector('#transform').setAttribute('position', center[0]+" "+center[1]+"  "+center[2]);
                     } else if (IAMcontrols[IAMcurrentControl] === 'scale') {
-                        targetElement.setAttribute('scale', targetElementOriginalValue.x + ' ' + (targetElementOriginalValue.y + mouseDistance) + ' ' + targetElementOriginalValue.z);
+                        targetElement.setAttribute('scale', targetElementOriginalValue.x + ' ' + (targetElementOriginalValue.y + mouseDistance/scaleSensResistance) + ' ' + targetElementOriginalValue.z);
                     } else if (IAMcontrols[IAMcurrentControl] === 'rotate') {
-                        targetElement.setAttribute('rotation', targetElementOriginalValue.x + ' ' + (targetElementOriginalValue.y + (mouseDistance * 360)) + ' ' + targetElementOriginalValue.z);
+                        targetElement.setAttribute('rotation', targetElementOriginalValue.x + ' ' + (targetElementOriginalValue.y + (mouseDistance * 360)/rotationSensResistance) + ' ' + targetElementOriginalValue.z);
                     }
                     break;
                 case 'z':
                     if (IAMcontrols[IAMcurrentControl] === 'translate') {
-                        targetElement.setAttribute('position', targetElementOriginalValue.x + ' ' + targetElementOriginalValue.y + ' ' + (targetElementOriginalValue.z + mouseDistance/2));
+                        targetElement.setAttribute('position', targetElementOriginalValue.x + ' ' + targetElementOriginalValue.y + ' ' + (targetElementOriginalValue.z + mouseDistance/positionSensResistence));
                         center=(targetElement.getAttribute("box-center")).split(" ");
                         document.querySelector('#transform').setAttribute('position', center[0]+" "+center[1]+"  "+center[2]);
                     } else if (IAMcontrols[IAMcurrentControl] === 'scale') {
-                        targetElement.setAttribute('scale', targetElementOriginalValue.x + ' ' + targetElementOriginalValue.y + ' ' + (targetElementOriginalValue.z + mouseDistance));
+                        targetElement.setAttribute('scale', targetElementOriginalValue.x + ' ' + targetElementOriginalValue.y + ' ' + (targetElementOriginalValue.z + mouseDistance/scaleSensResistance));
                     } else if (IAMcontrols[IAMcurrentControl] === 'rotate') {
-                        targetElement.setAttribute('rotation', targetElementOriginalValue.x + ' ' + targetElementOriginalValue.y + ' ' + (targetElementOriginalValue.z + (mouseDistance * 360)));
+                        targetElement.setAttribute('rotation', targetElementOriginalValue.x + ' ' + targetElementOriginalValue.y + ' ' + (targetElementOriginalValue.z + (mouseDistance * 360)/rotationSensResistance));
                     }
                     break;
                 case 'all':
                     if (IAMcontrols[IAMcurrentControl] === 'translate') {
-                        targetElement.setAttribute('position', (targetElementOriginalValue.x + mouseDistance/4) + ' ' + (targetElementOriginalValue.y + mouseDistance/4) + ' ' + (targetElementOriginalValue.z + mouseDistance/4));
+                        targetElement.setAttribute('position', (targetElementOriginalValue.x + mouseDistance/positionSensResistence) + ' ' + (targetElementOriginalValue.y + mouseDistance/positionSensResistence) + ' ' + (targetElementOriginalValue.z + mouseDistance/positionSensResistence));
                         center=(targetElement.getAttribute("box-center")).split(" ");
                         document.querySelector('#transform').setAttribute('position', center[0]+" "+center[1]+"  "+center[2]);
                     } else if (IAMcontrols[IAMcurrentControl] === 'scale') {
-                        targetElement.setAttribute('scale', (targetElementOriginalValue.x + mouseDistance) + ' ' + (targetElementOriginalValue.y + mouseDistance) + ' ' + (targetElementOriginalValue.z + mouseDistance));
+                        targetElement.setAttribute('scale', (targetElementOriginalValue.x + mouseDistance/scaleSensResistance) + ' ' + (targetElementOriginalValue.y + mouseDistance/scaleSensResistance) + ' ' + (targetElementOriginalValue.z + mouseDistance/scaleSensResistance));
                     } else if (IAMcontrols[IAMcurrentControl] === 'rotate') {
-                        targetElement.setAttribute('rotation', (targetElementOriginalValue.x + (mouseDistance * 360)) + ' ' + (targetElementOriginalValue.y + (mouseDistance * 360)) + ' ' + (targetElementOriginalValue.z + (mouseDistance * 360)));
+                        targetElement.setAttribute('rotation', (targetElementOriginalValue.x + (mouseDistance * 360)/rotationSensResistance) + ' ' + (targetElementOriginalValue.y + (mouseDistance * 360)/rotationSensResistance) + ' ' + (targetElementOriginalValue.z + (mouseDistance * 360)/rotationSensResistance));
                     }
                     break;
             }
